@@ -26,6 +26,53 @@ body {
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
+/* Print-friendly high contrast overrides */
+@media print {
+  html, body, #root {
+    height: auto !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .navbar {
+    background: transparent !important;
+    border-bottom: 1px solid #000000 !important;
+  }
+  .logo {
+    background: #000000 !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+  }
+  .btn, .btn-primary, .btn-ghost {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #000000 !important;
+    box-shadow: none !important;
+  }
+  .auth-form-card, .reminder-form-card, .card, .reminder-item-card, .empty-state {
+    background: #ffffff !important;
+    border: 1px solid #072357 !important;
+    box-shadow: none !important;
+  }
+  .input {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #000000 !important;
+    box-shadow: none !important;
+  }
+  .hero {
+    background: #ffffff !important;
+    border-bottom: 1px solid #000000 !important;
+  }
+  a {
+    color: #000000 !important;
+    text-decoration: underline !important;
+  }
+}
+
 .container {
   width: 100%;
   max-width: 1100px;
@@ -195,10 +242,22 @@ body {
 
 /* Cards and lists */
 .card, .feature-card, .reminder-item-card {
-  background: linear-gradient(180deg, var(--panel), #141821);
+  background:  #ffffff;
+ 
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 16px;
+}
+
+/* Feature cards: dark blue text on white for clear contrast */
+.feature-card {
+  color: #0f1f4b; /* deep navy to match overall theme */
+}
+.feature-card h3 {
+  color: #0b1a40; /* slightly deeper for headings */
+}
+.feature-card p {
+  color: #123a74 !important; /* override inline muted color */
 }
 
 .reminder-item-card {
@@ -269,8 +328,10 @@ a:hover {
 
 /* Hero */
 .hero {
-  background: radial-gradient(1200px 500px at 20% -10%, rgba(99,91,255,0.15) 0%, rgba(99,91,255,0.0) 60%),
-              linear-gradient(180deg, rgba(20,24,33,0.8) 0%, rgba(13,17,23,0.8) 100%);
+  background:
+    radial-gradient(900px 400px at 18% -12%, rgba(99,91,255,0.24) 0%, rgba(99,91,255,0) 62%),
+    radial-gradient(700px 320px at 82% -8%, rgba(99,91,255,0.12) 0%, rgba(99,91,255,0) 60%),
+    linear-gradient(180deg, rgba(28, 73, 162, 0.989) 0%, rgba(14, 38, 86, 0.96) 100%);
   border-bottom: 1px solid var(--border);
 }
 

@@ -11,10 +11,10 @@ export default function Landing() {
 
           <div className="container hero-inner">
             <span className="hero-eyebrow">  Reminders</span>
-            <h1 className="hero-title">Never miss the moments that matter.</h1>
+            <h1 className="hero-title">Empowering productivity through timely action.</h1>
             <p className="hero-subtitle">
-                Reminders helps students and faculty schedule, send and track
-              reminders by email and SMS — reliable, private, and beautifully simple.
+                Reminders helps individuals schedule, send and track
+              reminders by email and SMS reliable, private, and beautifully simple.
             </p>
             {/* <div className="hero-cta">
               <Link to="/register" className="btn-primary">Create account</Link>
@@ -44,9 +44,9 @@ export default function Landing() {
             </p>
           </div>
           <div className="feature-card" style={{ textAlign: "left" }}>
-            <h3 style={{ fontWeight: 700, fontSize: 18, margin: 0 }}>Privacy-focused</h3>
+            <h3 style={{ fontWeight: 700, fontSize: 18, margin: 0 }}>Privacy focused</h3>
             <p style={{ color: "var(--muted)", fontSize: 15, marginTop: 8 }}>
-              We design for small classrooms and personal use — your data stays private.
+              We design for small classrooms and personal use your data stays private.
             </p>
           </div>
         </div>
